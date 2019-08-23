@@ -53,6 +53,7 @@ public class PoemRegex {
 			System.out.println("Select proper input");
 			break;
 		}
+		scanner.close();
 
 	}
 
