@@ -11,6 +11,7 @@
 
 package com.bridgelabz.utility;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class ArraysUtility {
@@ -121,4 +122,52 @@ public class ArraysUtility {
 		return true;
 	}
 
+	public static boolean isAnagram(int num1, int num2) {
+		String str1, str2;
+		str1 = String.valueOf(num1);
+		str2 = String.valueOf(num2);
+		if (str1.length() != str2.length()) {
+			return false;
+		} else {
+			char[] ch1 = new char[str1.length()];
+			for (int i = 0; i < ch1.length; i++) {
+				ch1[i] = str1.charAt(i);
+			}
+			char[] ch2 = new char[str2.length()];
+			for (int i = 0; i < ch2.length; i++) {
+				ch2[i] = str2.charAt(i);
+			}
+			Arrays.sort(ch1);
+			Arrays.sort(ch2);
+
+			if (Arrays.equals(ch1, ch2)) {
+				return true;
+			} else {
+
+				return false;
+			}
+		}
+
+	}
+
+	public static boolean isPalindrome(int num1) {
+		int sum = 0;
+		int r;
+		int temp=num1;
+		if (num1 <= 10) {
+			return false;
+		} else {
+			while (num1 > 0) {
+				r = num1 % 10;
+				sum = (sum * 10) + r;
+				num1 = num1 / 10;
+			}
+			if (temp == sum)
+				return true;
+			else
+				return false;
+
+		}
+
+	}
 }
