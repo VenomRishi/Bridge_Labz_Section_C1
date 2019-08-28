@@ -31,34 +31,37 @@ public class UserForm {
 				if (utility.isValidEmail(email)) {
 					System.out.println("Enter phone with coutry code");
 					phone = scanner.nextLine();
-					if (utility.isValidMobile(phone)) {
-						System.out.println("Enter company");
-						company = scanner.next();
-						System.out.println("Enter userid");
-						userid = scanner.next();
-						if (utility.isValidUsername(userid)) {
-							System.out.println("Enter password");
-							password = scanner.next();
-							if (utility.isValidPassword(password)) {
-								System.out.println("Thank you for your time");
-								System.out.println("Form details is");
-								System.out.println("Fname :" + fname);
-								System.out.println("Lname :" + lname);
-								System.out.println("Email :" + email);
-								System.out.println("phone :" + phone);
-								System.out.println("company :" + company);
-								System.out.println("userid :" + userid);
-								System.out.println("password :" + password);
-							}
+					if (!phone.isEmpty()) {
+						System.out.println(phone);
+						if (utility.isValidMobile(phone)) {
+							System.out.println("Enter company");
+							company = scanner.next();
+							System.out.println("Enter userid");
+							userid = scanner.next();
+							if (utility.isValidUsername(userid)) {
+								System.out.println("Enter password");
+								password = scanner.next();
+								if (utility.isValidPassword(password)) {
+									System.out.println("Thank you for your time");
+									System.out.println("Form details is");
+									System.out.println("Fname :" + fname);
+									System.out.println("Lname :" + lname);
+									System.out.println("Email :" + email);
+									System.out.println("phone :" + phone);
+									System.out.println("company :" + company);
+									System.out.println("userid :" + userid);
+									System.out.println("password :" + password);
+								}
+							} else
+								System.out.println("Enter valid username");
 						} else
-							System.out.println("Enter valid username");
-					} else
-						System.out.println("Please enter valid mobile");
+							System.out.println("Please enter valid mobile");
+					}
 				} else
 					System.out.println("Please enter valid email");
+
 			} else
 				System.out.println("Please enter valid lname");
-
 		} else
 			System.out.println("Please enter valid fname");
 		scanner.close();
