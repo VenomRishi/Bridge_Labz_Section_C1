@@ -331,6 +331,10 @@ public class ArraysUtility {
 		Random random = new Random();
 		return (int) random.nextInt(6) + 1;// 1 to 6
 	}
+	public static int randomNumber(int range) {
+		Random random = new Random();
+		return (int) random.nextInt(range) + 1;// 1 to 6
+	}
 
 	public void gamling(int stake, int goal, int day) {
 		int tempstake = stake;
