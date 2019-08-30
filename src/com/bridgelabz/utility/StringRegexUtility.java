@@ -1,3 +1,4 @@
+
 /******************************************************************************
  *  Purpose: This is utility file which contains logic for functional files.
  *  		 this file is having methods who can take input process it and 
@@ -35,7 +36,7 @@ public class StringRegexUtility {
 		Date date = new Date();
 		String firstName = fullname.substring(0, fullname.indexOf(' '));
 		String str = "Hello <<name>>, We have your full name\r\n"
-				+ "as <<fullname>> in our system. your contact number is 91­xxxxxxxxxx. Please,let us\r\n"
+				+ "as <<fullname>> in our system. your contact number is 91Â­xxxxxxxxxx. Please,let us\r\n"
 				+ "know in case of any clarification Thank you BridgeLabz Date.";
 		String str1 = str.replaceAll("<<name>>", firstName);
 		String str2 = str1.replaceAll("<<fullname>>", fullname);
