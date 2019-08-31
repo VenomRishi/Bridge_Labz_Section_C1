@@ -97,13 +97,14 @@ public class RandomWalker {
 					}else {
 						board[i][j] = '-';
 						board[i + 1][j] = 'X';
+						bottomMove++;
 					}
 					
 				}
 				
 			}
 		}
-		bottomMove++;
+		
 	}
 
 	private static void moveTop() {
@@ -118,13 +119,14 @@ public class RandomWalker {
 					}else {
 						board[i][j] = '-';
 						board[i - 1][j] = 'X';
+						topMove++;
 					}
 					
 				}
 				
 			}
 		}
-		topMove++;
+		
 	}
 
 	private static void moveRight() {
@@ -140,12 +142,13 @@ public class RandomWalker {
 					}else {
 						board[i][j] = '-';
 						board[i][j + 1] = 'X';
+						rightMove++;
 					}
 					
 				}
 			}
 		}
-		rightMove++;
+		
 	}
 
 	private static void moveLeft() {
@@ -160,12 +163,13 @@ public class RandomWalker {
 					}else {
 						board[i][j] = '-';
 						board[i][j - 1] = 'X';
+						leftMove++;
 					}
 					
 				}
 			}
 		}
-		leftMove++;
+		
 	}
 
 }
