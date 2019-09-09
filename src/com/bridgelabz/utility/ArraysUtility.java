@@ -380,4 +380,26 @@ public class ArraysUtility {
 		return 0;
 	}
 
+	/**
+	 * Purpose: for finding triplet or not
+	 * 
+	 * @param arr array taken from user
+	 * @param count	count for how much elements is there in the array
+	 */
+	public void findDistinctTriplets(int[] arr, int count) {
+		for (int i = 0; i < count-2; i++) {
+			for (int j = i+1; j < count-1; j++) {
+				for (int k = j+1; k < count; k++) {
+					if(arr[i]+arr[j]+arr[k]==0) {
+						System.out.println(arr[i]+" "+arr[j]+" "+arr[k]+" is Triplet");
+					}else {
+						System.out.println("Not a triplet");
+					}
+				}
+			}
+		}
+		
+		
+	}
+
 }
