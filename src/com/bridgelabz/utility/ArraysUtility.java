@@ -189,112 +189,196 @@ public class ArraysUtility {
 	}
 
 	public static void printCalendar(int day, int days) {
+		System.out.println("SUN MON TUE WED THU FRI SAT");
+		String[][] cal = new String[6][7];
+		int temp;
 		switch (day) {
 		case 0:
-			System.out.println("SUN MON TUE WED THU FRI SAT");
-			for (int i = 1; i <= days; i++) {
-				if (i <= 9) {
-					System.out.print(i + "   ");
-				} else {
-					System.out.print(i + "  ");
+			temp = 1;
+			for (int i = 0; i < cal.length; i++) {
+				for (int j = 0; j < cal[i].length; j++) {
+					if (temp <= 9) {
+						cal[i][j] = temp + "   ";
+					} else {
+						cal[i][j] = temp + "  ";
+					}
+					temp++;
+					if (temp == days + 1) {
+						break;
+					}
 				}
-				if (i % 7 == 0) {
-					System.out.println();
+				if (temp == days + 1) {
+					break;
 				}
 			}
 			break;
 		case 1:
-			System.out.println("SUN MON TUE WED THU FRI SAT");
-			System.out.print("    ");
-			for (int i = 1; i <= days; i++) {
+			temp = 1;
 
-				if (i <= 9) {
-					System.out.print(i + "   ");
-				} else {
-					System.out.print(i + "  ");
+			for (int i = 0; i < cal.length; i++) {
+				for (int j = 0; j < cal[i].length; j++) {
+					if (i == 0 && j == 0) {
+						cal[i][j] = "    ";
+					} else {
+						if (i <= 9) {
+							cal[i][j] = temp + "   ";
+						} else {
+							cal[i][j] = temp + "  ";
+						}
+						temp++;
+					}
+					if (temp == days + 1) {
+						break;
+					}
+
 				}
-				if (i == 6 || i == 13 || i == 20 || i == 27) {
-					System.out.println();
+				if (temp == days + 1) {
+					break;
 				}
+
 			}
 			break;
 		case 2:
-			System.out.println("SUN MON TUE WED THU FRI SAT");
-			System.out.print("        ");
-			for (int i = 1; i <= days; i++) {
+			temp = 1;
 
-				if (i <= 9) {
-					System.out.print(i + "   ");
-				} else {
-					System.out.print(i + "  ");
+			for (int i = 0; i < cal.length; i++) {
+				for (int j = 0; j < cal[i].length; j++) {
+					if (i == 0 && j == 0 || i == 0 && j == 1) {
+						cal[i][j] = "    ";
+					} else {
+						if (temp <= 9) {
+							cal[i][j] = temp + "   ";
+						} else {
+							cal[i][j] = temp + "  ";
+						}
+						temp++;
+					}
+					if (temp == days + 1) {
+						break;
+					}
+
 				}
-				if (i == 5 || i == 12 || i == 19 || i == 26) {
-					System.out.println();
+				if (temp == days + 1) {
+					break;
 				}
+
 			}
 			break;
 		case 3:
-			System.out.println("SUN MON TUE WED THU FRI SAT");
-			System.out.print("            ");
-			for (int i = 1; i <= days; i++) {
+			temp = 1;
 
-				if (i <= 9) {
-					System.out.print(i + "   ");
-				} else {
-					System.out.print(i + "  ");
+			for (int i = 0; i < cal.length; i++) {
+				for (int j = 0; j < cal[i].length; j++) {
+					if (i == 0 && j <= 0 || i == 0 && j >= 2) {
+						cal[i][j] = "    ";
+					} else {
+						if (temp <= 9) {
+							cal[i][j] = temp + "   ";
+						} else {
+							cal[i][j] = temp + "  ";
+						}
+						temp++;
+					}
+					if (temp == days + 1) {
+						break;
+					}
+
 				}
-				if (i == 4 || i == 11 || i == 18 || i == 25) {
-					System.out.println();
+				if (temp == days + 1) {
+					break;
 				}
 			}
 			break;
 		case 4:
-			System.out.println("SUN MON TUE WED THU FRI SAT");
-			System.out.print("                ");
-			for (int i = 1; i <= days; i++) {
 
-				if (i <= 9) {
-					System.out.print(i + "   ");
-				} else {
-					System.out.print(i + "  ");
+			temp = 1;
+
+			for (int i = 0; i < cal.length; i++) {
+				for (int j = 0; j < cal[i].length; j++) {
+					if (i == 0 && j <= 0 || i == 0 && j >= 3) {
+						cal[i][j] = "    ";
+					} else {
+						if (temp <= 9) {
+							cal[i][j] = temp + "   ";
+						} else {
+							cal[i][j] = temp + "  ";
+						}
+						temp++;
+					}
+					if (temp == days + 1) {
+						break;
+					}
+
 				}
-				if (i == 3 || i == 10 || i == 17 || i == 24) {
-					System.out.println();
+				if (temp == days + 1) {
+					break;
 				}
 			}
 			break;
 		case 5:
-			System.out.println("SUN MON TUE WED THU FRI SAT");
-			System.out.print("                    ");
-			for (int i = 1; i <= days; i++) {
 
-				if (i <= 9) {
-					System.out.print(i + "   ");
-				} else {
-					System.out.print(i + "  ");
+			temp = 1;
+
+			for (int i = 0; i < cal.length; i++) {
+				for (int j = 0; j < cal[i].length; j++) {
+					if (i == 0 && j <= 0 || i == 0 && j >= 4) {
+						cal[i][j] = "    ";
+					} else {
+						if (temp <= 9) {
+							cal[i][j] = temp + "   ";
+						} else {
+							cal[i][j] = temp + "  ";
+						}
+						temp++;
+					}
+					if (temp == days + 1) {
+						break;
+					}
+
 				}
-				if (i == 2 || i == 9 || i == 16 || i == 23 || i == 30) {
-					System.out.println();
+				if (temp == days + 1) {
+					break;
 				}
 			}
 			break;
 		case 6:
-			System.out.println("SUN MON TUE WED THU FRI SAT");
-			System.out.print("                        ");
-			for (int i = 1; i <= days; i++) {
 
-				if (i <= 9) {
-					System.out.print(i + "   ");
-				} else {
-					System.out.print(i + "  ");
+			temp = 1;
+
+			for (int i = 0; i < cal.length; i++) {
+				for (int j = 0; j < cal[i].length; j++) {
+					if (i == 0 && j <= 0 || i == 0 && j >= 5) {
+						cal[i][j] = "    ";
+					} else {
+						if (temp <= 9) {
+							cal[i][j] = temp + "   ";
+						} else {
+							cal[i][j] = temp + "  ";
+						}
+						temp++;
+					}
+					if (temp == days + 1) {
+						break;
+					}
+
 				}
-				if (i == 1 || i == 8 || i == 15 || i == 22 || i == 29) {
-					System.out.println();
+				if (temp == days + 1) {
+					break;
 				}
 			}
 			break;
 		}
+		for (int i = 0; i < cal.length; i++) {
+			for (int j = 0; j < cal[i].length; j++) {
+				if (cal[i][j] == null)
+					break;
+				System.out.print(cal[i][j]);
 
+			}
+			if (cal[i] == null)
+				break;
+			System.out.println();
+		}
 	}
 
 	public static String[] shuffleCardsDeck(String[] arr) {
