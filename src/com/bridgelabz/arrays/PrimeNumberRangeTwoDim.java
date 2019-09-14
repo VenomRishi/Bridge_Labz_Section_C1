@@ -1,3 +1,12 @@
+/******************************************************************************
+ *  Purpose: Program is for printing prime number from 0 to 1000 using 2d array
+ *
+ *  @author  Rishikesh Mhatre
+ *  @version 1.0
+ *  @since   14-09-2019
+ *
+ ******************************************************************************/
+
 package com.bridgelabz.arrays;
 
 import com.bridgelabz.utility.ArraysUtility;
