@@ -94,7 +94,7 @@ public class StringRegexUtility {
 	}
 
 	public boolean isValidPassword(String password) {
-		// TODO Auto-generated method stub
+
 		/*
 		 * (?=.*[a-z]) : This matches the presence of at least one lowercase letter.
 		 * (?=.*d) : This matches the presence of at least one digit i.e. 0-9.
@@ -103,7 +103,7 @@ public class StringRegexUtility {
 		 * {6,16} : This limits the length of password from minimum 6 letters to maximum
 		 * 16 letters.
 		 */
-		Pattern pattern = Pattern.compile("((?=.*[a-z])(?=.*d)(?=.*[@#$%])(?=.*[A-Z]).{8,16}))");
+		Pattern pattern = Pattern.compile("((?=.*[a-z])(?=.*\\d)(?=.*[A-Z])(?=.*[@#$%!]).{8,40})");
 		Matcher matcher = pattern.matcher(password);
 		return matcher.matches();
 	}

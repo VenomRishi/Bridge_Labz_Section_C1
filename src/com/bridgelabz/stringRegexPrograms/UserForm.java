@@ -14,7 +14,6 @@ import java.util.Scanner;
 
 import com.bridgelabz.utility.StringRegexUtility;
 
-
 public class UserForm {
 
 	public static void main(String[] args) {
@@ -22,13 +21,13 @@ public class UserForm {
 		String fname, lname, email, phone, company, userid, password;
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("Enter fname");
-		fname = scanner.next();
+		fname = scanner.nextLine();
 		if (utility.isValidName(fname)) {
 			System.out.println("Enter lname");
-			lname = scanner.next();
+			lname = scanner.nextLine();
 			if (utility.isValidName(lname)) {
 				System.out.println("Enter email");
-				email = scanner.next();
+				email = scanner.nextLine();
 				if (utility.isValidEmail(email)) {
 					System.out.println("Enter phone with coutry code");
 					phone = scanner.nextLine();
@@ -36,9 +35,9 @@ public class UserForm {
 						System.out.println(phone);
 						if (utility.isValidMobile(phone)) {
 							System.out.println("Enter company");
-							company = scanner.next();
+							company = scanner.nextLine();
 							System.out.println("Enter userid");
-							userid = scanner.next();
+							userid = scanner.nextLine();
 							if (utility.isValidUsername(userid)) {
 								System.out.println("Enter password");
 								password = scanner.next();
@@ -52,7 +51,8 @@ public class UserForm {
 									System.out.println("company :" + company);
 									System.out.println("userid :" + userid);
 									System.out.println("password :" + password);
-								}
+								} else
+									System.out.println("Enter valid password");
 							} else
 								System.out.println("Enter valid username");
 						} else
